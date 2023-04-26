@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #0d6efd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-weight: 600;">CRUD Application</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+      <button class="btn btn-danger" (click)="regs()" style="width: 100px;">Register</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4" >
+    <div class="card">
+            <h1 class="dghaja">Employee Registation</h1>
+    
+    <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Phone number">
+          </div>
+    
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter E-mail">
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" placeholder="Enter password">
+          </div>
+
+        <button type="submit" class="btnsdf btn-primary" (click)="save()" >Save</button>
+       
+      </form>
+    </div>

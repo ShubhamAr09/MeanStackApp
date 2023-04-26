@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #0d6efd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: 600;">CRUD Application</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+        <button class="btn btn-danger" (click)="regs()" style="width: 100px;">LOG OUT</button>
+      </div>
+    </div>
+  </nav>
+
+<div class="container mt-4 my-5">
+    <div class="card">
+        <h1 class="erabc">Employee Registration</h1>
+
+
+        <form>
+
+            <div class="form-group">
+                <label class="namefgh">Name</label>
+                <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleInputEmail1" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label class="addabc">Phone</label>
+                <input type="text" class="form-control" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" id="exampleInputEmail1" placeholder="Enter Phone">
+            </div>
+            <div class="form-group">
+                <label class="phoneabc">Email</label>
+                <input type="text" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="exampleInputEmail1" placeholder="Enter E-mail">
+            </div>
+            <button type="submit" (click)="save()" class="btnxyz btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+<div class="container mt-4 my-5" >
+    <h1 class="emptab">Employee Table</h1>
+    <table class="table">
+      <thead>    
+      <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">E-mail</th>  
+          <th scope="col">Option</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let EmployeeItem of EmployeeArray">
+          <td>{{EmployeeItem.name }}</td>
+          <td>{{EmployeeItem.phone }}</td>
+          <td>{{EmployeeItem.email }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="setUpdate(EmployeeItem)">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="setDelete(EmployeeItem)">Delete</button>            
+          </td>
+        </tr>          
+      </tbody>
+    </table>
+     
+    </div>
